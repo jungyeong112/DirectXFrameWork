@@ -3,7 +3,7 @@
 CLoader::CLoader(LPDIRECT3DDEVICE9 pGraphic_Device)
 	: m_pGraphic_Device { pGraphic_Device }
 {
-	Safe_AddRef(m_pGraphic_Device);
+	Safe_AddRef(m_pGraphic_Device); //09.29
 }
 
 /* 절대 메인 스레드가 호출하지 않는다. 우리가 생성한 서브 스레드가 호출해준  것이다. */
