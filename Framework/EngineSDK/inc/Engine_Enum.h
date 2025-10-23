@@ -4,6 +4,10 @@
 namespace Engine
 {
 	enum class WINMODE { FULL, WIN, END };	
+	enum class PROTOTYPE { GAMEOBJECT, COMPONENT };
+	enum class RENDERGROUP { PRIORITY, NONBLEND, BLEND, UI, END };
+	enum class STATE { RIGHT, UP, LOOK, POSITION, END };
+	enum class TEXTURE { PLANE, CUBE, END };
 	
 
 }

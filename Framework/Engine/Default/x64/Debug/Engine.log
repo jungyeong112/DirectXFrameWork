@@ -1,3 +1,10 @@
-﻿  GameInstance.cpp
+﻿  Component.cpp
+  GameInstance.cpp
+  GameObject.cpp
+  Level.cpp
+  Level_Manager.cpp
+  Object_Manager.cpp
+  Prototype_Manager.cpp
+  코드를 생성하고 있습니다...
      ../Bin/Engine.lib 라이브러리 및 ../Bin/Engine.exp 개체를 생성하고 있습니다.
   Engine.vcxproj -> D:\Burger\157\Framework\Engine\Bin\Engine.dll

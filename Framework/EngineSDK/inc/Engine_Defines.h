@@ -3,8 +3,6 @@
 
 #pragma warning(disable : 4251)
 
-
-
 #include <d3d9.h>
 #include <d3dx9.h>
 
@@ -16,6 +14,8 @@
 #include <string>
 #include <unordered_map>
 #include <ctime>
+
+using namespace std;
 
 #include "Engine_Enum.h"
 #include "Engine_Macro.h"
@@ -42,7 +42,7 @@
 #endif
 #endif
 
-using namespace std;
+
 using namespace Engine;
 
 #endif // Engine_Define_h__

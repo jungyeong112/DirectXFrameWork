@@ -16,7 +16,6 @@ class CLevel_Loading final : public CLevel
 private:
 	CLevel_Loading(LPDIRECT3DDEVICE9 pGraphic_Device);
 	virtual ~CLevel_Loading() = default;
-
 public:
 	virtual HRESULT Initialize(LEVEL eNextLevel);
 	virtual void Update(_float fTimeDelta) override;
@@ -24,8 +23,7 @@ public:
 
 private:
 	LEVEL			m_eNextLevel = {};
-	class CLoader*  m_pLoader = { nullptr };
-
+	class CLoader*	m_pLoader = { nullptr };
 public:
 	static CLevel_Loading* Create(LPDIRECT3DDEVICE9 pGraphic_Device, LEVEL eNextLevel);
 	virtual void Free() override;

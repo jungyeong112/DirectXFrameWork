@@ -34,9 +34,9 @@ HRESULT CGraphic_Device::Initialize(HWND hWnd, WINMODE eMode, _uint iSizeX, _uin
 
 	// vp = 정점의 변환 + 명암(조명) 연산 -> 모델을 렌더링했다. -> 모델을 고정기능렌더링파이프라인을 수행하여 렌더링하였다. 
 	if (DeviceCaps.DevCaps & D3DDEVCAPS_HWTRANSFORMANDLIGHT)
-		dwFlag |= D3DCREATE_HARDWARE_VERTEXPROCESSING;
+		dwFlag |= D3DCREATE_HARDWARE_VERTEXPROCESSING | D3DCREATE_MULTITHREADED;
 	else
-		dwFlag |= D3DCREATE_SOFTWARE_VERTEXPROCESSING;
+		dwFlag |= D3DCREATE_SOFTWARE_VERTEXPROCESSING | D3DCREATE_MULTITHREADED;
 
 	D3DPRESENT_PARAMETERS		d3dpp;
 	ZeroMemory(&d3dpp, sizeof(D3DPRESENT_PARAMETERS));

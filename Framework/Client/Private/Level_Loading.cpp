@@ -44,7 +44,7 @@ void CLevel_Loading::Update(_float fTimeDelta)
 
 		if (FAILED(m_pGameInstance->Change_Level(ENUM_TO_UINT(m_eNextLevel), pNewLevel)))
 			return;
-			
+
 		return;
 	}
 
@@ -52,6 +52,9 @@ void CLevel_Loading::Update(_float fTimeDelta)
 
 HRESULT CLevel_Loading::Render()
 {
+
+	m_pLoader->Output();
+
 	return S_OK;
 }
 

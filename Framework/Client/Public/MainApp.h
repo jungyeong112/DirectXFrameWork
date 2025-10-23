@@ -25,6 +25,8 @@ private:
 	LPDIRECT3DDEVICE9			m_pGraphic_Device = { nullptr };
 
 private:
+	HRESULT Ready_DefaultSetting();
+	HRESULT Ready_Prototype_For_Static_Level();
 	HRESULT Start_Level(LEVEL eStartLevel);
 public:
 	static CMainApp* Create();

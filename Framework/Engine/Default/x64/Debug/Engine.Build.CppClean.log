@@ -1,9 +1,14 @@
 d:\burger\157\framework\engine\default\x64\debug\vc143.pdb
 d:\burger\157\framework\engine\default\x64\debug\vc143.idb
 d:\burger\157\framework\engine\default\x64\debug\level_manager.obj
+d:\burger\157\framework\engine\default\x64\debug\level.obj
 d:\burger\157\framework\engine\default\x64\debug\graphic_device.obj
+d:\burger\157\framework\engine\default\x64\debug\gameobject.obj
 d:\burger\157\framework\engine\default\x64\debug\gameinstance.obj
 d:\burger\157\framework\engine\default\x64\debug\base.obj
+d:\burger\157\framework\engine\default\x64\debug\prototype_manager.obj
+d:\burger\157\framework\engine\default\x64\debug\layer.obj
+d:\burger\157\framework\engine\default\x64\debug\object_manager.obj
 d:\burger\157\framework\engine\bin\engine.dll
 d:\burger\157\framework\engine\bin\engine.pdb
 d:\burger\157\framework\engine\bin\engine.lib

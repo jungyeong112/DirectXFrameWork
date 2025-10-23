@@ -1,5 +1,8 @@
 #include "Level_Logo.h"
 
+#include "GameInstance.h"
+#include "Level_Loading.h"
+
 CLevel_Logo::CLevel_Logo(LPDIRECT3DDEVICE9 pGraphic_Device)
 	: CLevel { pGraphic_Device }
 {
@@ -8,15 +11,38 @@ CLevel_Logo::CLevel_Logo(LPDIRECT3DDEVICE9 pGraphic_Device)
 
 HRESULT CLevel_Logo::Initialize()
 {
+
+	if (FAILED(Ready_Layer_BackGround(TEXT("Layer_BackGround"))))
+		return E_FAIL;
+
 	return S_OK;
 }
 
 void CLevel_Logo::Update(_float fTimeDelta)
 {
+	if (GetKeyState(VK_RETURN) & 0x8000)
+	{
+		if (FAILED(m_pGameInstance->Change_Level(ENUM_TO_UINT(LEVEL::LOADING), CLevel_Loading::Create(m_pGraphic_Device, LEVEL::GAMEPLAY))))
+			return;
+
+		return;
+	}
 }
 
 HRESULT CLevel_Logo::Render()
 {
+
+	SetWindowText(g_hWnd, TEXT("로고레벨 입니다."));
+
+	return S_OK;
+}
+
+HRESULT CLevel_Logo::Ready_Layer_BackGround(const _wstring& strLayerTag)
+{
+	if (FAILED(m_pGameInstance->Add_GameObject_ToLayer(ENUM_TO_UINT(LEVEL::STATIC), TEXT("Prototype_GameObject_BackGround"),
+		ENUM_TO_UINT(LEVEL::LOGO), strLayerTag)))
+		return E_FAIL;
+
 	return S_OK;
 }
 

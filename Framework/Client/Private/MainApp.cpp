@@ -18,10 +18,16 @@ HRESULT CMainApp::Initialize()
 	EngineDesc.eMode = WINMODE::WIN;
 	EngineDesc.iWinSizeX = g_iWinSizeX;
 	EngineDesc.iWinSizeY = g_iWinSizeY;
+	EngineDesc.iNumLevels = ENUM_TO_UINT(LEVEL::END);
 
 	if(FAILED(m_pGameInstance->Initialize_Engine(EngineDesc, &m_pGraphic_Device)))
 		return E_FAIL;
 
+	if (FAILED(Ready_DefaultSetting()))
+		return E_FAIL;
+
+	if (FAILED(Ready_Prototype_For_Static_Level()))
+		return E_FAIL;
 
 	if (FAILED(Start_Level(LEVEL::LOGO)))
 		return E_FAIL;
@@ -39,7 +45,31 @@ HRESULT CMainApp::Render()
 	if (FAILED(m_pGameInstance->Begin_Draw()))
 		return E_FAIL;
 
+	if (FAILED(m_pGameInstance->Draw()))
+		return E_FAIL;
+
 	if (FAILED(m_pGameInstance->End_Draw()))
+		return E_FAIL;
+
+	return S_OK;
+}
+
+HRESULT CMainApp::Ready_DefaultSetting()
+{
+	m_pGraphic_Device->SetRenderState(D3DRS_LIGHTING, FALSE);
+	m_pGraphic_Device->SetRenderState(D3DRS_FILLMODE, D3DFILL_WIREFRAME);
+
+	return S_OK;
+}
+
+HRESULT CMainApp::Ready_Prototype_For_Static_Level()
+{
+	if (FAILED(m_pGameInstance->Add_Prototype(ENUM_TO_UINT(LEVEL::STATIC), TEXT("Prototype_Component_Transform"),
+		CTransform::Create(m_pGraphic_Device))))
+		return E_FAIL;
+
+	if (FAILED(m_pGameInstance->Add_Prototype(ENUM_TO_UINT(LEVEL::STATIC), TEXT("Prototype_Component_VIBuffer_Rect"),
+		CVIBuffer_Rect::Create(m_pGraphic_Device))))
 		return E_FAIL;
 
 	return S_OK;

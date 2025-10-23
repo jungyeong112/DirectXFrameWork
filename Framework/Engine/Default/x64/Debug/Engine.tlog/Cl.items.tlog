@@ -1,5 +1,17 @@
 D:\Burger\157\Framework\Engine\private\Base.cpp;D:\Burger\157\Framework\Engine\Default\x64\Debug\Base.obj
+D:\Burger\157\Framework\Engine\private\Component.cpp;D:\Burger\157\Framework\Engine\Default\x64\Debug\Component.obj
 D:\Burger\157\Framework\Engine\private\GameInstance.cpp;D:\Burger\157\Framework\Engine\Default\x64\Debug\GameInstance.obj
+D:\Burger\157\Framework\Engine\private\GameObject.cpp;D:\Burger\157\Framework\Engine\Default\x64\Debug\GameObject.obj
 D:\Burger\157\Framework\Engine\Private\Graphic_Device.cpp;D:\Burger\157\Framework\Engine\Default\x64\Debug\Graphic_Device.obj
+D:\Burger\157\Framework\Engine\private\Layer.cpp;D:\Burger\157\Framework\Engine\Default\x64\Debug\Layer.obj
 D:\Burger\157\Framework\Engine\private\Level.cpp;D:\Burger\157\Framework\Engine\Default\x64\Debug\Level.obj
 D:\Burger\157\Framework\Engine\private\Level_Manager.cpp;D:\Burger\157\Framework\Engine\Default\x64\Debug\Level_Manager.obj
+D:\Burger\157\Framework\Engine\private\Object_Manager.cpp;D:\Burger\157\Framework\Engine\Default\x64\Debug\Object_Manager.obj
+D:\Burger\157\Framework\Engine\private\Prototype_Manager.cpp;D:\Burger\157\Framework\Engine\Default\x64\Debug\Prototype_Manager.obj
+D:\Burger\157\Framework\Engine\private\Renderer.cpp;D:\Burger\157\Framework\Engine\Default\x64\Debug\Renderer.obj
+D:\Burger\157\Framework\Engine\private\Texture.cpp;D:\Burger\157\Framework\Engine\Default\x64\Debug\Texture.obj
+D:\Burger\157\Framework\Engine\private\Transform.cpp;D:\Burger\157\Framework\Engine\Default\x64\Debug\Transform.obj
+D:\Burger\157\Framework\Engine\private\UIObject.cpp;D:\Burger\157\Framework\Engine\Default\x64\Debug\UIObject.obj
+D:\Burger\157\Framework\Engine\private\VIBuffer.cpp;D:\Burger\157\Framework\Engine\Default\x64\Debug\VIBuffer.obj
+D:\Burger\157\Framework\Engine\private\VIBuffer_Rect.cpp;D:\Burger\157\Framework\Engine\Default\x64\Debug\VIBuffer_Rect.obj
+D:\Burger\157\Framework\Engine\Private\VIBuffer_Terrain.cpp;D:\Burger\157\Framework\Engine\Default\x64\Debug\VIBuffer_Terrain.obj

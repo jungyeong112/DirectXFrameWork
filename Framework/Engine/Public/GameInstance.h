@@ -7,7 +7,7 @@
 /* 엔진에서 정의되는 대다수의 객체는 게임인스턴스가 들고 있어야하는 상황이. */
 /* 굳이 다른 클래스들을 싱글턴을 만들 이유가 크게 없다. */
 
-#include "Base.h"
+#include "Prototype_Manager.h"
 
 NS_BEGIN(Engine)
 
@@ -34,12 +34,34 @@ public:
 	HRESULT Change_Level(_uint iLevelIndex, class CLevel* pNewLevel);
 #pragma endregion
 
+#pragma region PROTOTYPE_MANAGER
+public:
+	HRESULT Add_Prototype(_uint iLevelIndex, const _wstring& strPrototypeTag, class CBase* pPrototype);
+	CBase* Clone_Prototype(PROTOTYPE ePrototype, _uint iLevelIndex, const _wstring& strPrototypeTag, void* pArg = nullptr);
+#pragma endregion
+
+
+#pragma region OBJECT_MANAGER
+public:	
+	HRESULT Add_GameObject_ToLayer(_uint iPrototypeLevelIndex, const _wstring& strPrototypeTag, _uint iLayerLevelIndex, const _wstring& strLayerTag, void* pArg = nullptr);
+#pragma endregion
+
+#pragma region RENDERER
+public:
+	HRESULT Add_RenderGroup(RENDERGROUP eGroupID, class CGameObject* pRenderObject);
+#pragma endregion
+	
+
+
+
+
 
 private:
 	class CGraphic_Device*		m_pGraphic_Device = { nullptr };
 	class CLevel_Manager*		m_pLevel_Manager = { nullptr };
 	class CPrototype_Manager*	m_pPrototype_Manager = { nullptr };
 	class CObject_Manager*		m_pObject_Manager = { nullptr };
+	class CRenderer*			m_pRenderer = { nullptr };
 
 public:
 	virtual void Free() override;

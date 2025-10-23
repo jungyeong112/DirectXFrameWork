@@ -9,3 +9,11 @@
 *.db
 *.vsidx
 Framework/.vs/DirectXFrameWork/
+*.db
+*.db
+*.lastbuildstate
+*.tlog
+*.obj
+*.db
+*.tlog
+*.log
